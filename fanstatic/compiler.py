@@ -202,6 +202,7 @@ class CoffeeScript(CommandlineBase, Compiler):
 
     name = 'coffee'
     command = 'coffee'
+    source_extension = '.coffee'
     arguments = ['--compile', '--bare', '--print', SOURCE]
 
     def process(self, source, target):
@@ -216,6 +217,7 @@ class LESS(CommandlineBase, Compiler):
 
     name = 'less'
     command = 'lessc'
+    source_extension = '.less'
     arguments = [SOURCE, TARGET]
 
 LESS_COMPILER = LESS()
